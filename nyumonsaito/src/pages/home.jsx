@@ -1,6 +1,6 @@
 // ホームページ
 import { Link } from 'react-router-dom'
-import PageLayout, { GenreLinks } from './layout.jsx'
+import PageLayout from './layout.jsx'
 
 function HomePage() {
   return (
@@ -10,12 +10,8 @@ function HomePage() {
       description="パズルからコードへ。自分のペースで、プログラムの組み立て方を身につけよう。"
     >
       <section className="hero-actions">
-        <Link className="primary-button" to="/genre/site">学習をはじめる</Link>
+        <Link className="primary-button" to="/genre">学習をはじめる</Link>
         <Link className="text-link" to="/about">このサイトについて</Link>
-      </section>
-      <section className="section-block">
-        <h2>学習する分野を選ぶ</h2>
-        <GenreLinks />
       </section>
     </PageLayout>
   )

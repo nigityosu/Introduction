@@ -9,6 +9,7 @@ import HomePage from './pages/home.jsx'
 import IntermediateExamPage from './pages/int-exam.jsx'
 import IntermediatePage from './pages/intermed.jsx'
 import GenreTopPage from './pages/genre.jsx'
+import GenreSelectPage from './pages/genre-select.jsx'
 import NotFoundPage from './pages/notfound.jsx'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/" element={<HomePage />} />
 				<Route path="/about" element={<ExplanationPage />} />
 				<Route path="/contact" element={<ContactPage />} />
+				<Route path="/genre" element={<GenreSelectPage />} />
 				<Route path="/genre/site" element={<GenreTopPage genre="site" />} />
 				<Route path="/genre/site/beginner" element={<BeginnerPage genre="site" />} />
 				<Route path="/genre/site/beginner/exam" element={<BeginnerExamPage genre="site" />} />
