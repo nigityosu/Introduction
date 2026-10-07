@@ -11,7 +11,9 @@ function PageLayout({ eyebrow, title, description, children }) {
   return (
     <div className="app-shell">
       <header className="site-header">
-        <Link className="brand" to="/">はじめてのプログラミング</Link>
+        <Link className="brand" to="/">
+          はじめてのプログラミング
+        </Link>
         <nav aria-label="メインメニュー">
           <Link to="/">ホーム</Link>
           <Link to="/about">説明</Link>
@@ -21,10 +23,14 @@ function PageLayout({ eyebrow, title, description, children }) {
       <main className="page-content">
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
-        {description && <p className="page-description">{description}</p>}
+        {description && (
+          <p className="page-description">{description}</p>
+        )}
         {children}
       </main>
-      <footer className="site-footer">学ぶ、試す、つくる。</footer>
+      <footer className="site-footer">
+        学ぶ、試す、つくる。
+      </footer>
     </div>
   )
 }

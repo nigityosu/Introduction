@@ -11,11 +11,24 @@ const genreData = {
 function GenreTopPage({ genre }) {
   const data = genreData[genre]
   return (
-    <PageLayout eyebrow="LEARNING COURSE" title={data.name} description={data.description}>
+    <PageLayout
+      eyebrow="LEARNING COURSE"
+      title={data.name}
+      description={data.description}
+    >
       <div className="level-grid">
-        <Link className="level-card" to={data.beginner}><strong>初級</strong><span>パズルで基本構造をつくる</span></Link>
-        <div className="level-card is-disabled"><strong>中級</strong><span>初級試験合格後に解放</span></div>
-        <div className="level-card is-disabled"><strong>上級</strong><span>中級試験合格後に解放</span></div>
+        <Link className="level-card" to={data.beginner}>
+          <strong>初級</strong>
+          <span>パズルで基本構造をつくる</span>
+        </Link>
+        <div className="level-card is-disabled">
+          <strong>中級</strong>
+          <span>初級試験合格後に解放</span>
+        </div>
+        <div className="level-card is-disabled">
+          <strong>上級</strong>
+          <span>中級試験合格後に解放</span>
+        </div>
       </div>
     </PageLayout>
   )
