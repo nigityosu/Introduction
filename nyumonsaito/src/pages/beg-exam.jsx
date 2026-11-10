@@ -1,6 +1,8 @@
 // 各ジャンルの初級試験ページ
 import { Link } from 'react-router-dom'
 import PageLayout from './layout.jsx'
+import BlockPuzzle from '../components/BlockPuzzle.jsx'
+import { beginnerExamPuzzles } from '../data/puzzles.js'
 
 const genreNames = { site: 'サイト作成', game: 'ゲーム制作', robot: 'ロボットソフト' }
 
@@ -9,18 +11,12 @@ function BeginnerExamPage({ genre }) {
     <PageLayout
       eyebrow="BEGINNER EXAM"
       title={`${genreNames[genre]}・初級試験`}
-      description="これまでの学習を使って、基本の構造を一人で完成させます。"
+      description="部品を正しい順に組み立てると合格です。"
     >
-      <section className="content-panel exam-panel">
-        <div>
-          <span className="status-label">試験条件</span>
-          <h2>基本課題を完成させる</h2>
-          <p>正解率 80%以上で合格</p>
-        </div>
-        <button className="primary-button" type="button">
-          試験を開始する
-        </button>
-      </section>
+      <BlockPuzzle
+        {...(beginnerExamPuzzles[genre] ?? beginnerExamPuzzles.site)}
+        nextHref={genre === 'site' ? '/genre/site/intermediate/html-css-js' : '/genre'}
+      />
       <Link className="text-link" to={`/genre/${genre}/beginner`}>
         初級ページに戻る
       </Link>

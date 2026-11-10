@@ -1,6 +1,8 @@
 // HTML・CSS・JavaScriptの中級学習ページ
 import { Link } from 'react-router-dom'
 import PageLayout from './layout.jsx'
+import BlockPuzzle from '../components/BlockPuzzle.jsx'
+import { beginnerPuzzles, intermediatePuzzle } from '../data/puzzles.js'
 
 function IntermediatePage() {
   return (
@@ -12,11 +14,10 @@ function IntermediatePage() {
       <section className="content-panel lesson-panel">
         <span className="status-label">Lesson 01</span>
         <h2>イベントと動きを組み合わせる</h2>
-        <p>部品の説明を読み、正しい関数や要素を組み合わせましょう。</p>
-        <button className="primary-button" type="button">
-          中級の練習をはじめる
-        </button>
+        <p>コードの部品を正しい順に並べ、ボタンのクリックに反応する処理を作りましょう。</p>
       </section>
+      <BlockPuzzle {...beginnerPuzzles.site} title="HTML · PARTS" />
+      <BlockPuzzle {...intermediatePuzzle} nextHref="/genre/site/intermediate/html-css-js/exam" />
       <Link
         className="exam-link"
         to="/genre/site/intermediate/html-css-js/exam"
