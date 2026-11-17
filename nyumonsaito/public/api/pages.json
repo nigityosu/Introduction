@@ -1,0 +1,22 @@
+[
+  { "id": "home", "path": "/", "title": "Home", "category": "Common", "description": "Programming learning site home page." },
+  { "id": "about", "path": "/about", "title": "About", "category": "Common", "description": "Introduction to the site and its learning approach." },
+  { "id": "contact", "path": "/contact", "title": "Contact", "category": "Common", "description": "Contact information." },
+  { "id": "genre", "path": "/genre", "title": "Learning genres", "category": "Common", "description": "Choose a programming topic to learn." },
+  { "id": "site", "path": "/genre/site", "title": "Website development", "category": "Website development", "description": "Website development course overview." },
+  { "id": "site-beginner", "path": "/genre/site/beginner", "title": "Website development: Beginner", "category": "Website development", "description": "Learn to create pages with HTML and CSS." },
+  { "id": "site-beginner-lesson", "path": "/genre/site/beginner/lesson", "title": "Website development: Beginner lesson", "category": "Website development", "description": "Beginner website development lesson." },
+  { "id": "site-beginner-exam", "path": "/genre/site/beginner/exam", "title": "Website development: Beginner exam", "category": "Website development", "description": "Review quiz for the beginner lesson." },
+  { "id": "site-intermediate", "path": "/genre/site/intermediate/html-css-js", "title": "HTML, CSS and JavaScript: Intermediate", "category": "Website development", "description": "Learn to combine HTML, CSS and JavaScript." },
+  { "id": "site-intermediate-exam", "path": "/genre/site/intermediate/html-css-js/exam", "title": "Website development: Intermediate exam", "category": "Website development", "description": "Review quiz for the intermediate lesson." },
+  { "id": "site-advanced", "path": "/genre/site/advanced/html-css-js", "title": "HTML, CSS and JavaScript: Advanced", "category": "Website development", "description": "Build a web page by writing code." },
+  { "id": "site-graduation-exam", "path": "/genre/site/advanced/html-css-js/exam", "title": "Graduation project", "category": "Website development", "description": "Build a web page using what you have learned." },
+  { "id": "game", "path": "/genre/game", "title": "Game development", "category": "Game development", "description": "Game development course overview." },
+  { "id": "game-beginner", "path": "/genre/game/beginner", "title": "Game development: Beginner", "category": "Game development", "description": "Learn the basics of game development." },
+  { "id": "game-beginner-lesson", "path": "/genre/game/beginner/lesson", "title": "Game development: Beginner lesson", "category": "Game development", "description": "Beginner game development lesson." },
+  { "id": "game-beginner-exam", "path": "/genre/game/beginner/exam", "title": "Game development: Beginner exam", "category": "Game development", "description": "Beginner game development quiz." },
+  { "id": "robot", "path": "/genre/robot", "title": "Robot software", "category": "Robotics", "description": "Robot programming course overview." },
+  { "id": "robot-beginner", "path": "/genre/robot/beginner", "title": "Robot software: Beginner", "category": "Robotics", "description": "Learn the basics of robot control and programming." },
+  { "id": "robot-beginner-lesson", "path": "/genre/robot/beginner/lesson", "title": "Robot software: Beginner lesson", "category": "Robotics", "description": "Beginner robotics lesson." },
+  { "id": "robot-beginner-exam", "path": "/genre/robot/beginner/exam", "title": "Robot software: Beginner exam", "category": "Robotics", "description": "Beginner robotics quiz." }
+]

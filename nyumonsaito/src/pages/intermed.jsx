@@ -2,7 +2,8 @@
 import { Link } from 'react-router-dom'
 import PageLayout from './layout.jsx'
 import BlockPuzzle from '../components/BlockPuzzle.jsx'
-import { beginnerPuzzles, intermediatePuzzle } from '../data/puzzles.js'
+import siteBeginnerData from '../jason/site-beginner.json'
+import siteIntermediateData from '../jason/site-intermediate.json'
 
 function IntermediatePage() {
   return (
@@ -16,8 +17,8 @@ function IntermediatePage() {
         <h2>イベントと動きを組み合わせる</h2>
         <p>コードの部品を正しい順に並べ、ボタンのクリックに反応する処理を作りましょう。</p>
       </section>
-      <BlockPuzzle {...beginnerPuzzles.site} title="HTML · PARTS" />
-      <BlockPuzzle {...intermediatePuzzle} nextHref="/genre/site/intermediate/html-css-js/exam" />
+      <BlockPuzzle {...siteBeginnerData.lesson} title="HTML · PARTS" />
+      <BlockPuzzle {...siteIntermediateData.lesson} nextHref="/genre/site/intermediate/html-css-js/exam" />
       <Link
         className="exam-link"
         to="/genre/site/intermediate/html-css-js/exam"

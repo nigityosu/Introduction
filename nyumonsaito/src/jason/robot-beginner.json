@@ -1,1 +1,70 @@
-{}
+{
+  "lesson": {
+    "title": "ROBOT · LESSON 01",
+    "instruction": "センサーを使ってロボットを動かす流れを組み立てましょう。",
+    "pieces": [
+      {
+        "id": "move",
+        "label": "前進する",
+        "code": "ロボットを前に進める"
+      },
+      {
+        "id": "sensor",
+        "label": "距離を調べる",
+        "code": "センサーで前方の距離を読む"
+      },
+      {
+        "id": "stop",
+        "label": "停止する",
+        "code": "ロボットを停止する"
+      },
+      {
+        "id": "condition",
+        "label": "条件を確認",
+        "code": "障害物が近いか調べる"
+      },
+      {
+        "id": "wrong",
+        "label": "まちがい部品",
+        "code": "センサーを無効にする"
+      }
+    ],
+    "solution": [
+      "sensor",
+      "condition",
+      "move",
+      "stop"
+    ]
+  },
+  "exam": {
+    "title": "BEGINNER EXAM · ROBOT",
+    "instruction": "障害物を見つけて止まるロボットの処理を並べましょう。",
+    "pieces": [
+      {
+        "id": "read",
+        "label": "距離を読む",
+        "code": "センサーから距離を取得する"
+      },
+      {
+        "id": "check",
+        "label": "条件を確認",
+        "code": "距離が近いか判定する"
+      },
+      {
+        "id": "stop",
+        "label": "停止",
+        "code": "ロボットを停止する"
+      },
+      {
+        "id": "wrong",
+        "label": "まちがい部品",
+        "code": "障害物に向かって進む"
+      }
+    ],
+    "solution": [
+      "read",
+      "check",
+      "stop"
+    ]
+  }
+}

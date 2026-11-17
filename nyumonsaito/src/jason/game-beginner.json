@@ -1,1 +1,70 @@
-{}
+{
+  "lesson": {
+    "title": "GAME · LESSON 01",
+    "instruction": "ゲームの開始から画面更新まで、処理の順番を組み立てましょう。",
+    "pieces": [
+      {
+        "id": "input",
+        "label": "入力を受け取る",
+        "code": "プレイヤーの操作を読む"
+      },
+      {
+        "id": "start",
+        "label": "ゲーム開始",
+        "code": "ゲームを開始する"
+      },
+      {
+        "id": "update",
+        "label": "画面を更新",
+        "code": "新しい状態を画面に表示する"
+      },
+      {
+        "id": "state",
+        "label": "状態を準備",
+        "code": "スコアとプレイヤーを初期化する"
+      },
+      {
+        "id": "wrong",
+        "label": "まちがい部品",
+        "code": "ゲームを終了する"
+      }
+    ],
+    "solution": [
+      "start",
+      "state",
+      "input",
+      "update"
+    ]
+  },
+  "exam": {
+    "title": "BEGINNER EXAM · GAME",
+    "instruction": "ゲームの1ターンに必要な処理を順番に並べましょう。",
+    "pieces": [
+      {
+        "id": "input",
+        "label": "操作を読む",
+        "code": "プレイヤーの入力を受け取る"
+      },
+      {
+        "id": "draw",
+        "label": "画面を描く",
+        "code": "現在の状態を画面に表示する"
+      },
+      {
+        "id": "end",
+        "label": "ゲームを終える",
+        "code": "ゲームを終了する"
+      },
+      {
+        "id": "update",
+        "label": "状態を更新",
+        "code": "入力に合わせてゲームの状態を更新する"
+      }
+    ],
+    "solution": [
+      "input",
+      "update",
+      "draw"
+    ]
+  }
+}

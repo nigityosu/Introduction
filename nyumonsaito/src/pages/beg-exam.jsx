@@ -2,7 +2,9 @@
 import { Link } from 'react-router-dom'
 import PageLayout from './layout.jsx'
 import BlockPuzzle from '../components/BlockPuzzle.jsx'
-import { beginnerExamPuzzles } from '../data/puzzles.js'
+import siteBeginnerData from '../jason/site-beginner.json'
+import gameBeginnerData from '../jason/game-beginner.json'
+import robotBeginnerData from '../jason/robot-beginner.json'
 
 const genreNames = { site: 'サイト作成', game: 'ゲーム制作', robot: 'ロボットソフト' }
 
@@ -14,7 +16,7 @@ function BeginnerExamPage({ genre }) {
       description="部品を正しい順に組み立てると合格です。"
     >
       <BlockPuzzle
-        {...(beginnerExamPuzzles[genre] ?? beginnerExamPuzzles.site)}
+        {...({ site: siteBeginnerData, game: gameBeginnerData, robot: robotBeginnerData }[genre] ?? siteBeginnerData).exam}
         nextHref={genre === 'site' ? '/genre/site/intermediate/html-css-js' : '/genre'}
       />
       <Link className="text-link" to={`/genre/${genre}/beginner`}>

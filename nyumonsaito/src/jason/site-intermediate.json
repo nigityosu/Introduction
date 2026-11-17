@@ -1,1 +1,100 @@
-{}
+{
+  "advancedEditor": {
+    "starter": {
+      "html": "<main class=\"card\">\n  <h1>こんにちは、Web制作</h1>\n  <p id=\"message\">ボタンを押してみましょう。</p>\n  <button id=\"greet\">あいさつする</button>\n</main>",
+      "css": "body {\n  font-family: sans-serif;\n  background: #f3f7f1;\n  padding: 2rem;\n}\n.card {\n  max-width: 32rem;\n  margin: 2rem auto;\n  padding: 2rem;\n  border-radius: 1rem;\n  background: white;\n  box-shadow: 0 8px 28px #20342e20;\n}\nbutton { padding: .7rem 1rem; cursor: pointer; }",
+      "js": "document.querySelector('#greet').addEventListener('click', () => {\n  document.querySelector('#message').textContent = 'こんにちは！';\n});"
+    },
+    "exam": {
+      "html": "<main class=\"card\">\n  <!-- ここに見出し・説明文・ボタンを作ります -->\n</main>",
+      "css": "",
+      "js": ""
+    }
+  },
+  "lesson": {
+    "title": "HTML・CSS・JavaScript · PRACTICE",
+    "instruction": "ボタンをクリックしたときに文章が変わる処理を組み立てましょう。",
+    "pieces": [
+      {
+        "id": "select",
+        "label": "ボタンを取得",
+        "code": "const button = document.querySelector('#greet');"
+      },
+      {
+        "id": "message",
+        "label": "文章の要素を取得",
+        "code": "const message = document.querySelector('#message');"
+      },
+      {
+        "id": "update",
+        "label": "文章を変更",
+        "code": "message.textContent = 'こんにちは！';"
+      },
+      {
+        "id": "wrong",
+        "label": "イベント名を指定",
+        "code": "button.addEventListener('hover', () => {"
+      },
+      {
+        "id": "listen",
+        "label": "クリックを待つ",
+        "code": "button.addEventListener('click', () => {"
+      },
+      {
+        "id": "close",
+        "label": "処理を閉じる",
+        "code": "});"
+      }
+    ],
+    "solution": [
+      "select",
+      "message",
+      "listen",
+      "update",
+      "close"
+    ]
+  },
+  "exam": {
+    "title": "HTML・CSS・JavaScript · PRACTICE",
+    "instruction": "ボタンをクリックしたときに文章が変わる処理を組み立てましょう。",
+    "pieces": [
+      {
+        "id": "select",
+        "label": "ボタンを取得",
+        "code": "const button = document.querySelector('#greet');"
+      },
+      {
+        "id": "message",
+        "label": "文章の要素を取得",
+        "code": "const message = document.querySelector('#message');"
+      },
+      {
+        "id": "update",
+        "label": "文章を変更",
+        "code": "message.textContent = 'こんにちは！';"
+      },
+      {
+        "id": "wrong",
+        "label": "イベント名を指定",
+        "code": "button.addEventListener('hover', () => {"
+      },
+      {
+        "id": "listen",
+        "label": "クリックを待つ",
+        "code": "button.addEventListener('click', () => {"
+      },
+      {
+        "id": "close",
+        "label": "処理を閉じる",
+        "code": "});"
+      }
+    ],
+    "solution": [
+      "select",
+      "message",
+      "listen",
+      "update",
+      "close"
+    ]
+  }
+}

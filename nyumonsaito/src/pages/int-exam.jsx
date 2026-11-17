@@ -2,7 +2,8 @@
 import { Link } from 'react-router-dom'
 import PageLayout from './layout.jsx'
 import BlockPuzzle from '../components/BlockPuzzle.jsx'
-import { beginnerPuzzles, intermediatePuzzle } from '../data/puzzles.js'
+import siteBeginnerData from '../jason/site-beginner.json'
+import siteIntermediateData from '../jason/site-intermediate.json'
 
 function IntermediateExamPage() {
   return (
@@ -11,8 +12,8 @@ function IntermediateExamPage() {
       title="HTML・CSS・JavaScript・中級試験"
       description="コードの部品を正しく組み立てて、イベント処理を完成させる試験です。"
     >
-      <BlockPuzzle {...beginnerPuzzles.site} title="HTML · STRUCTURE EXAM" />
-      <BlockPuzzle {...intermediatePuzzle} title="INTERMEDIATE EXAM" nextHref="/genre/site/advanced/html-css-js" />
+      <BlockPuzzle {...siteBeginnerData.lesson} title="HTML · STRUCTURE EXAM" />
+      <BlockPuzzle {...siteIntermediateData.exam} title="INTERMEDIATE EXAM" nextHref="/genre/site/advanced/html-css-js" />
       <Link className="text-link" to="/genre/site/intermediate/html-css-js">
         中級ページに戻る
       </Link>

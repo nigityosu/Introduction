@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import PageLayout from './layout.jsx'
 import BlockPuzzle from '../components/BlockPuzzle.jsx'
-import { beginnerPuzzles } from '../data/puzzles.js'
-import SiteWorkshop from '../components/SiteWorkshop.jsx'
+import siteBeginnerData from '../jason/site-beginner.json'
+import gameBeginnerData from '../jason/game-beginner.json'
+import robotBeginnerData from '../jason/robot-beginner.json'
 
 const lessonInfo = {
   game: {
@@ -25,13 +26,16 @@ function BeginnerSitePage({ genre = 'site', examMode = false }) {
         title={examMode ? '初級の実技課題' : 'サイトづくり · 初級'}
         description={examMode ? '文字やページの雰囲気を決めて、自分の紹介ページを完成させましょう。' : '文字や色を選びながら、実際のページを作ってみましょう。'}
       >
-        <SiteWorkshop examMode={examMode} />
+        <BlockPuzzle
+          {...(examMode ? siteBeginnerData.exam : siteBeginnerData.lesson)}
+          nextHref={examMode ? '/genre/site/intermediate/html-css-js' : '/genre/site/beginner/exam'}
+        />
       </PageLayout>
     )
   }
 
   const lesson = lessonInfo[genre] ?? lessonInfo.game
-  const puzzle = beginnerPuzzles[genre] ?? beginnerPuzzles.game
+  const puzzle = ({ site: siteBeginnerData, game: gameBeginnerData, robot: robotBeginnerData }[genre] ?? gameBeginnerData).lesson
   return (
     <PageLayout eyebrow={`${genre.toUpperCase()} · LESSON 01`} title={lesson.title} description={lesson.description}>
       <section className="content-panel lesson-panel">

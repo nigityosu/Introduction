@@ -1,35 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PageLayout from './layout.jsx'
-
-const starterHtml = `<main class="card">
-  <h1>こんにちは、Web制作</h1>
-  <p id="message">ボタンを押してみましょう。</p>
-  <button id="greet">あいさつする</button>
-</main>`
-
-const starterCss = `body {
-  font-family: sans-serif;
-  background: #f3f7f1;
-  padding: 2rem;
-}
-.card {
-  max-width: 32rem;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  background: white;
-  box-shadow: 0 8px 28px #20342e20;
-}
-button { padding: .7rem 1rem; cursor: pointer; }`
-
-const starterJs = `document.querySelector('#greet').addEventListener('click', () => {
-  document.querySelector('#message').textContent = 'こんにちは！';
-});`
-
-const examHtml = `<main class="card">
-  <!-- ここに見出し・説明文・ボタンを作ります -->
-</main>`
+import siteIntermediateData from '../jason/site-intermediate.json'
 
 function makePreview(html, css, js) {
 	const safeScript = js.replace(/<\/script/gi, '<\\/script')
@@ -37,9 +9,12 @@ function makePreview(html, css, js) {
 }
 
 function AdvancedPage({ examMode = false }) {
-	const initialHtml = examMode ? examHtml : starterHtml
-	const initialCss = examMode ? '' : starterCss
-	const initialJs = examMode ? '' : starterJs
+	const initialTemplate = examMode
+		? siteIntermediateData.advancedEditor.exam
+		: siteIntermediateData.advancedEditor.starter
+	const initialHtml = initialTemplate.html
+	const initialCss = initialTemplate.css
+	const initialJs = initialTemplate.js
 	const [html, setHtml] = useState(initialHtml)
 	const [css, setCss] = useState(initialCss)
 	const [js, setJs] = useState(initialJs)

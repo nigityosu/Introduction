@@ -56,3 +56,17 @@
  - 完成は卒業するまでにしたい
  - なるべくお金はかからないよう気を付けるべき
  - こんご学校説明会や部活動体験入部で活躍してほしいと願い作成
+# ページ情報 API
+
+ページ情報は `public/api/pages.json` にあります。Vite の開発サーバーとビルド後のサイトで、`GET /api/pages.json` として取得できます。
+
+アプリ内から使う場合は `src/api/pages.js` の関数を利用します。
+
+```js
+import { getPages, getPageByPath } from './api/pages.js'
+
+const pages = await getPages()
+const page = await getPageByPath('/about')
+```
+
+ページ情報には `id`、`path`、`title`、`category`、`description` を含めています。この構成は静的JSONをAPIのように読むもので、サーバー側でデータを更新する機能はありません。

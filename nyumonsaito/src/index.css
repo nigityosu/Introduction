@@ -89,6 +89,16 @@ h2 { margin: 0 0 18px; font-size: 1.45rem; line-height: 1.4; letter-spacing: -.0
 .workshop-controls input, .workshop-controls textarea { width: 100%; padding: 11px 12px; border: 1px solid #cbd3c9; border-radius: 5px; background: #fafbf8; color: #20342e; }
 .workshop-controls input:focus, .workshop-controls textarea:focus { border-color: #bd5b38; outline: 2px solid rgba(189,91,56,.18); }
 .workshop-controls textarea { resize: vertical; }
+.layout-picker { display: grid; gap: 9px; margin: 0; padding: 14px; border: 1px solid #dce0d7; border-radius: 6px; }
+.layout-picker legend { padding: 0 5px; font-weight: 800; }
+.layout-picker p { margin: 0; color: #53645c; font-size: .9rem; }
+.layout-picker ol { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.layout-picker li { display: flex; align-items: center; gap: 8px; padding: 8px; border: 1px solid #dce0d7; border-radius: 5px; background: #fff; cursor: grab; }
+.layout-picker li:active { cursor: grabbing; }
+.layout-drag-handle { color: #718078; font-size: 1.2rem; }
+.layout-picker li button { width: 32px; height: 32px; margin-left: auto; border: 1px solid #cbd3c9; border-radius: 4px; background: #fafbf8; color: #20342e; }
+.layout-picker li button + button { margin-left: 0; }
+.layout-picker li button:disabled { opacity: .4; cursor: not-allowed; }
 .theme-picker { margin: 0; padding: 12px; border: 1px solid #dce0d7; border-radius: 5px; }
 .theme-picker legend { padding: 0 5px; font-weight: 700; }
 .theme-options { display: flex; flex-wrap: wrap; gap: 8px; }

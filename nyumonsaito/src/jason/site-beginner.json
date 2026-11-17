@@ -1,1 +1,82 @@
-{}
+{
+  "lesson": {
+    "title": "WEB SITE · LESSON 01",
+    "instruction": "Webページの部品を、正しい順番で組み立てましょう。",
+    "pieces": [
+      {
+        "id": "heading",
+        "label": "見出し",
+        "code": "<h1>はじめてのページ</h1>"
+      },
+      {
+        "id": "close",
+        "label": "閉じタグ",
+        "code": "</main>"
+      },
+      {
+        "id": "button",
+        "label": "ボタン",
+        "code": "<button>はじめる</button>"
+      },
+      {
+        "id": "open",
+        "label": "全体を囲む",
+        "code": "<main>"
+      },
+      {
+        "id": "paragraph",
+        "label": "説明文",
+        "code": "<p>ページを作ってみよう。</p>"
+      },
+      {
+        "id": "wrong",
+        "label": "まちがい部品",
+        "code": "</p>"
+      }
+    ],
+    "solution": [
+      "open",
+      "heading",
+      "paragraph",
+      "button",
+      "close"
+    ]
+  },
+  "exam": {
+    "title": "BEGINNER EXAM · WEB",
+    "instruction": "プロフィールページの構造を完成させましょう。",
+    "pieces": [
+      {
+        "id": "title",
+        "label": "ページ全体",
+        "code": "<main>"
+      },
+      {
+        "id": "close",
+        "label": "ページを閉じる",
+        "code": "</main>"
+      },
+      {
+        "id": "heading",
+        "label": "見出し",
+        "code": "<h1>わたしの紹介</h1>"
+      },
+      {
+        "id": "text",
+        "label": "紹介文",
+        "code": "<p>好きなことを紹介します。</p>"
+      },
+      {
+        "id": "wrong",
+        "label": "まちがい部品",
+        "code": "<footer>"
+      }
+    ],
+    "solution": [
+      "title",
+      "heading",
+      "text",
+      "close"
+    ]
+  }
+}
