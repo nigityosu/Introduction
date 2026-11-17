@@ -27,7 +27,7 @@ function BeginnerSitePage({ genre = 'site', examMode = false }) {
         description={examMode ? '文字やページの雰囲気を決めて、自分の紹介ページを完成させましょう。' : '文字や色を選びながら、実際のページを作ってみましょう。'}
       >
         <BlockPuzzle
-          {...(examMode ? siteBeginnerData.exam : siteBeginnerData.lesson)}
+          {...(examMode ? siteBeginnerData.exams?.[0] : siteBeginnerData.lessons?.[0])}
           nextHref={examMode ? '/genre/site/intermediate/html-css-js' : '/genre/site/beginner/exam'}
         />
       </PageLayout>
@@ -35,7 +35,7 @@ function BeginnerSitePage({ genre = 'site', examMode = false }) {
   }
 
   const lesson = lessonInfo[genre] ?? lessonInfo.game
-  const puzzle = ({ site: siteBeginnerData, game: gameBeginnerData, robot: robotBeginnerData }[genre] ?? gameBeginnerData).lesson
+  const puzzle = ({ site: siteBeginnerData, game: gameBeginnerData, robot: robotBeginnerData }[genre] ?? gameBeginnerData).lessons?.[0]
   return (
     <PageLayout eyebrow={`${genre.toUpperCase()} · LESSON 01`} title={lesson.title} description={lesson.description}>
       <section className="content-panel lesson-panel">

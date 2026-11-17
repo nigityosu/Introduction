@@ -1,4 +1,352 @@
 {
   "level": "intermediate",
-  "status": "coming-soon"
+  "status": "available",
+  "lessons": [
+    {
+      "title": "ROBOT · INTERMEDIATE 01",
+      "instruction": "setupとloopの基本構造を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "l",
+          "label": "loop開始",
+          "code": "void loop() {"
+        },
+        {
+          "id": "lc",
+          "label": "loop終了",
+          "code": "}"
+        },
+        {
+          "id": "pin",
+          "label": "ピン設定",
+          "code": "pinMode(MOTOR_PIN, OUTPUT);"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "pinMode(MOTOR_PIN, INPUT);"
+        },
+        {
+          "id": "sc",
+          "label": "setup終了",
+          "code": "}"
+        },
+        {
+          "id": "w",
+          "label": "出力",
+          "code": "digitalWrite(MOTOR_PIN, HIGH);"
+        },
+        {
+          "id": "s",
+          "label": "setup開始",
+          "code": "void setup() {"
+        }
+      ],
+      "solution": [
+        "s",
+        "pin",
+        "sc",
+        "l",
+        "w",
+        "lc"
+      ]
+    },
+    {
+      "title": "ROBOT · INTERMEDIATE 02",
+      "instruction": "距離によって止まるか進むかを分けましょう。",
+      "pieces": [
+        {
+          "id": "read",
+          "label": "距離を読む",
+          "code": "int d = readDistance();"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "if",
+          "label": "条件",
+          "code": "if (d < 20) {"
+        },
+        {
+          "id": "else",
+          "label": "それ以外",
+          "code": "} else {"
+        },
+        {
+          "id": "stop",
+          "label": "停止",
+          "code": "stopMotors();"
+        },
+        {
+          "id": "go",
+          "label": "前進",
+          "code": "moveForward();"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "if (d = 20) {"
+        }
+      ],
+      "solution": [
+        "read",
+        "if",
+        "stop",
+        "else",
+        "go",
+        "close"
+      ]
+    },
+    {
+      "title": "ROBOT · INTERMEDIATE 03",
+      "instruction": "PWMでモーターの速さを制御しましょう。",
+      "pieces": [
+        {
+          "id": "on",
+          "label": "出力する",
+          "code": "analogWrite(MOTOR_PIN, speed);"
+        },
+        {
+          "id": "wait",
+          "label": "待つ",
+          "code": "delay(1000);"
+        },
+        {
+          "id": "off",
+          "label": "出力を0にする",
+          "code": "analogWrite(MOTOR_PIN, 0);"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "analogWrite(MOTOR_PIN, 300);"
+        },
+        {
+          "id": "sp",
+          "label": "速度を決める",
+          "code": "int speed = 150;"
+        }
+      ],
+      "solution": [
+        "sp",
+        "on",
+        "wait",
+        "off"
+      ]
+    },
+    {
+      "title": "ROBOT · INTERMEDIATE 04",
+      "instruction": "四角形を描くように動かすくり返しを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "go",
+          "label": "前進",
+          "code": "moveForward();"
+        },
+        {
+          "id": "wait",
+          "label": "待つ",
+          "code": "delay(500);"
+        },
+        {
+          "id": "for",
+          "label": "4回くり返す",
+          "code": "for (int i = 0; i < 4; i++) {"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "for (int i = 0; i > 4; i++) {"
+        },
+        {
+          "id": "turn",
+          "label": "右に曲がる",
+          "code": "turnRight();"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        }
+      ],
+      "solution": [
+        "for",
+        "go",
+        "wait",
+        "turn",
+        "close"
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "title": "INTERMEDIATE EXAM · ROBOT 01",
+      "instruction": "距離をシリアルモニタに表示する処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "Serial.end();"
+        },
+        {
+          "id": "begin",
+          "label": "通信開始",
+          "code": "Serial.begin(9600);"
+        },
+        {
+          "id": "print",
+          "label": "表示",
+          "code": "Serial.println(d);"
+        },
+        {
+          "id": "wait",
+          "label": "待つ",
+          "code": "delay(100);"
+        },
+        {
+          "id": "read",
+          "label": "距離を読む",
+          "code": "int d = readDistance();"
+        }
+      ],
+      "solution": [
+        "begin",
+        "read",
+        "print",
+        "wait"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · ROBOT 02",
+      "instruction": "状態を切り替えるロボットの処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "init",
+          "label": "初期状態",
+          "code": "State state = FORWARD;"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "set",
+          "label": "状態を変更",
+          "code": "state = TURN;"
+        },
+        {
+          "id": "enum",
+          "label": "状態を定義",
+          "code": "enum State { FORWARD, TURN };"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "state == TURN;"
+        },
+        {
+          "id": "if",
+          "label": "条件",
+          "code": "if (state == FORWARD && d < 20) {"
+        }
+      ],
+      "solution": [
+        "enum",
+        "init",
+        "if",
+        "set",
+        "close"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · ROBOT 03",
+      "instruction": "バンパーに当たったときの動きを並べましょう。",
+      "pieces": [
+        {
+          "id": "back",
+          "label": "後退",
+          "code": "moveBackward();"
+        },
+        {
+          "id": "if",
+          "label": "接触確認",
+          "code": "if (digitalRead(BUMPER) == LOW) {"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "turn",
+          "label": "左に曲がる",
+          "code": "turnLeft();"
+        },
+        {
+          "id": "wait",
+          "label": "待つ",
+          "code": "delay(300);"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "if (digitalRead(BUMPER) = LOW) {"
+        }
+      ],
+      "solution": [
+        "if",
+        "back",
+        "wait",
+        "turn",
+        "close"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · ROBOT 04",
+      "instruction": "2つのセンサーで進む向きを決めましょう。",
+      "pieces": [
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "delay(left);"
+        },
+        {
+          "id": "l",
+          "label": "左を読む",
+          "code": "int left = analogRead(LEFT);"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "turn",
+          "label": "左に曲がる",
+          "code": "turnLeft();"
+        },
+        {
+          "id": "r",
+          "label": "右を読む",
+          "code": "int right = analogRead(RIGHT);"
+        },
+        {
+          "id": "if",
+          "label": "比較",
+          "code": "if (left > right) {"
+        }
+      ],
+      "solution": [
+        "l",
+        "r",
+        "if",
+        "turn",
+        "close"
+      ]
+    }
+  ]
 }

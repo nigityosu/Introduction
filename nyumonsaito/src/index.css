@@ -61,6 +61,19 @@ h2 { margin: 0 0 18px; font-size: 1.45rem; line-height: 1.4; letter-spacing: -.0
 .puzzle-slot { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: center; gap: 10px; min-height: 58px; padding: 10px 14px; border: 1px dashed #aab6aa; border-radius: 5px; background: #f8f9f5; color: #20342e; text-align: left; }
 .puzzle-slot:hover, .puzzle-slot:focus-visible { border-color: #bd5b38; }
 .puzzle-slot.has-piece { border-style: solid; background: #fff; }
+.puzzle-live-preview { display: grid; gap: 10px; margin: 10px 0; padding: 14px; border: 1px solid #dce0d7; border-radius: 7px; background: #f2f5ef; }
+.puzzle-preview-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; color: #53645c; }
+.puzzle-preview-heading span { color: #bd5b38; font-size: .68rem; font-weight: 800; letter-spacing: .14em; }
+.puzzle-preview-heading strong { font-size: .82rem; }
+.puzzle-preview-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 9px; }
+.puzzle-preview-inputs label { display: grid; gap: 4px; color: #53645c; font-size: .8rem; font-weight: 700; }
+.puzzle-preview-inputs input, .puzzle-preview-inputs textarea { width: 100%; min-width: 0; padding: 8px 10px; border: 1px solid #cbd3c9; border-radius: 4px; background: white; color: #20342e; font: inherit; font-weight: 400; }
+.puzzle-preview-inputs textarea { resize: vertical; }
+.puzzle-preview-page { display: grid; justify-items: start; align-content: center; gap: 12px; min-height: 160px; padding: 22px; border: 1px solid #e1e5dd; border-radius: 5px; background: white; box-shadow: 0 5px 16px rgba(32,52,46,.05); }
+.puzzle-preview-page h3 { margin: 0; color: #20342e; font-size: 1.45rem; line-height: 1.35; }
+.puzzle-preview-page p { margin: 0; color: #64736b; }
+.puzzle-preview-page button { padding: 9px 15px; border: 0; border-radius: 4px; background: #20342e; color: white; font-weight: 700; }
+.puzzle-preview-page .puzzle-preview-placeholder { color: #849087; font-size: .9rem; }
 .puzzle-slot code, .puzzle-piece code { overflow-wrap: anywhere; white-space: pre-wrap; font: .88rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace; }
 .slot-number { display: grid; width: 25px; height: 25px; place-items: center; border-radius: 50%; background: #e9f0e4; color: #34483f; font-size: .78rem; font-weight: 800; }
 .puzzle-pieces { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }

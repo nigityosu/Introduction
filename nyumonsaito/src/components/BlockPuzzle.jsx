@@ -6,10 +6,13 @@ function BlockPuzzle({ title, instruction, pieces, solution, nextHref }) {
 	const [selectedPiece, setSelectedPiece] = useState(null)
 	const [checked, setChecked] = useState(false)
 	const [showHint, setShowHint] = useState(false)
+	const [previewText, setPreviewText] = useState({ heading: 'はじめてのページ', paragraph: '好きなことや、伝えたいことを書いてみましょう。', button: 'クリック' })
 	const complete = arrangement.every((pieceId, index) => pieceId === solution[index])
 	const usedPieces = new Set(arrangement.filter(Boolean))
 	const placedCount = arrangement.filter(Boolean).length
 	const blocksById = Object.fromEntries(pieces.map((piece) => [piece.id, piece]))
+	const isSitePuzzle = pieces.some((piece) => ['heading', 'paragraph', 'button', 'text'].includes(piece.id))
+	const previewPieces = arrangement.filter((pieceId) => pieceId && blocksById[pieceId])
 
 	function placePiece(slotIndex, pieceId) {
 		setArrangement((current) => {
@@ -67,6 +70,25 @@ function BlockPuzzle({ title, instruction, pieces, solution, nextHref }) {
 					</button>
 				))}
 			</div>
+			{isSitePuzzle && (
+				<section className="puzzle-live-preview" aria-label="作成中のページプレビュー" aria-live="polite">
+					<div className="puzzle-preview-heading"><span>LIVE PREVIEW</span><strong>作成中のページ</strong></div>
+					<div className="puzzle-preview-inputs">
+						<label>見出し<input value={previewText.heading} onChange={(event) => setPreviewText((current) => ({ ...current, heading: event.target.value }))} placeholder="見出しを入力" /></label>
+						<label>本文<textarea value={previewText.paragraph} onChange={(event) => setPreviewText((current) => ({ ...current, paragraph: event.target.value }))} placeholder="本文を入力" rows={2} /></label>
+						<label>ボタンの文字<input value={previewText.button} onChange={(event) => setPreviewText((current) => ({ ...current, button: event.target.value }))} placeholder="ボタンの文字を入力" /></label>
+					</div>
+					<div className="puzzle-preview-page">
+						{previewPieces.map((piece, index) => {
+							if (piece.id === 'heading') return <h3 key={`${piece.id}-${index}`}>{previewText.heading || '見出し'}</h3>
+							if (piece.id === 'paragraph' || piece.id === 'text') return <p key={`${piece.id}-${index}`}>{previewText.paragraph || '本文'}</p>
+							if (piece.id === 'button') return <button key={`${piece.id}-${index}`} type="button">{previewText.button || 'ボタン'}</button>
+							return null
+						})}
+						{previewPieces.length === 0 && <p className="puzzle-preview-placeholder">ブロックを置くと、ここにページが表示されます。</p>}
+					</div>
+				</section>
+			)}
 			<div className="puzzle-pieces" aria-label="使える部品">
 				{pieces.filter((piece) => !usedPieces.has(piece.id)).map((piece) => (
 					<button

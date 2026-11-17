@@ -1,70 +1,266 @@
 {
-  "lesson": {
-    "title": "GAME · LESSON 01",
-    "instruction": "ゲームの開始から画面更新まで、処理の順番を組み立てましょう。",
-    "pieces": [
-      {
-        "id": "input",
-        "label": "入力を受け取る",
-        "code": "プレイヤーの操作を読む"
-      },
-      {
-        "id": "start",
-        "label": "ゲーム開始",
-        "code": "ゲームを開始する"
-      },
-      {
-        "id": "update",
-        "label": "画面を更新",
-        "code": "新しい状態を画面に表示する"
-      },
-      {
-        "id": "state",
-        "label": "状態を準備",
-        "code": "スコアとプレイヤーを初期化する"
-      },
-      {
-        "id": "wrong",
-        "label": "まちがい部品",
-        "code": "ゲームを終了する"
-      }
-    ],
-    "solution": [
-      "start",
-      "state",
-      "input",
-      "update"
-    ]
-  },
-  "exam": {
-    "title": "BEGINNER EXAM · GAME",
-    "instruction": "ゲームの1ターンに必要な処理を順番に並べましょう。",
-    "pieces": [
-      {
-        "id": "input",
-        "label": "操作を読む",
-        "code": "プレイヤーの入力を受け取る"
-      },
-      {
-        "id": "draw",
-        "label": "画面を描く",
-        "code": "現在の状態を画面に表示する"
-      },
-      {
-        "id": "end",
-        "label": "ゲームを終える",
-        "code": "ゲームを終了する"
-      },
-      {
-        "id": "update",
-        "label": "状態を更新",
-        "code": "入力に合わせてゲームの状態を更新する"
-      }
-    ],
-    "solution": [
-      "input",
-      "update",
-      "draw"
-    ]
-  }
+  "lessons": [
+    {
+      "title": "GAME · LESSON 01",
+      "instruction": "ゲームの開始から画面更新まで、処理の順番を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "input",
+          "label": "入力を受け取る",
+          "code": "プレイヤーの操作を読む"
+        },
+        {
+          "id": "start",
+          "label": "ゲーム開始",
+          "code": "ゲームを開始する"
+        },
+        {
+          "id": "update",
+          "label": "画面を更新",
+          "code": "新しい状態を画面に表示する"
+        },
+        {
+          "id": "state",
+          "label": "状態を準備",
+          "code": "スコアとプレイヤーを初期化する"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "ゲームを終了する"
+        }
+      ],
+      "solution": [
+        "start",
+        "state",
+        "input",
+        "update"
+      ]
+    },
+    {
+      "title": "GAME · LESSON 02",
+      "instruction": "コインを取ってスコアが増える流れを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "スコアを0に戻す"
+        },
+        {
+          "id": "show",
+          "label": "スコアを表示",
+          "code": "スコアを画面に表示する"
+        },
+        {
+          "id": "hit",
+          "label": "当たりを判定",
+          "code": "コインに触れたか調べる"
+        },
+        {
+          "id": "add",
+          "label": "スコアを加算",
+          "code": "スコアを1増やす"
+        }
+      ],
+      "solution": [
+        "hit",
+        "add",
+        "show"
+      ]
+    },
+    {
+      "title": "GAME · LESSON 03",
+      "instruction": "ライフがなくなったときの流れを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "retry",
+          "label": "再開を待つ",
+          "code": "リトライの操作を待つ"
+        },
+        {
+          "id": "check",
+          "label": "ライフを確認",
+          "code": "ライフが0か調べる"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "ライフを増やし続ける"
+        },
+        {
+          "id": "over",
+          "label": "終了画面",
+          "code": "ゲームオーバー画面を出す"
+        }
+      ],
+      "solution": [
+        "check",
+        "over",
+        "retry"
+      ]
+    },
+    {
+      "title": "GAME · LESSON 04",
+      "instruction": "キャラクターを右に動かす流れを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "move",
+          "label": "座標を変更",
+          "code": "キャラクターのx座標を1増やす"
+        },
+        {
+          "id": "key",
+          "label": "キーを確認",
+          "code": "右キーが押されたか調べる"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "キャラクターを削除する"
+        },
+        {
+          "id": "draw",
+          "label": "描き直す",
+          "code": "キャラクターを新しい位置に描く"
+        }
+      ],
+      "solution": [
+        "key",
+        "move",
+        "draw"
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "title": "BEGINNER EXAM · GAME",
+      "instruction": "ゲームの1ターンに必要な処理を順番に並べましょう。",
+      "pieces": [
+        {
+          "id": "input",
+          "label": "操作を読む",
+          "code": "プレイヤーの入力を受け取る"
+        },
+        {
+          "id": "draw",
+          "label": "画面を描く",
+          "code": "現在の状態を画面に表示する"
+        },
+        {
+          "id": "end",
+          "label": "ゲームを終える",
+          "code": "ゲームを終了する"
+        },
+        {
+          "id": "update",
+          "label": "状態を更新",
+          "code": "入力に合わせてゲームの状態を更新する"
+        }
+      ],
+      "solution": [
+        "input",
+        "update",
+        "draw"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · GAME 02",
+      "instruction": "敵が出てきて、ぶつかるまでの処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "hit",
+          "label": "当たり判定",
+          "code": "敵とプレイヤーが重なったか調べる"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "敵をすべて消す"
+        },
+        {
+          "id": "make",
+          "label": "敵を作る",
+          "code": "画面の端に敵を配置する"
+        },
+        {
+          "id": "move",
+          "label": "敵を動かす",
+          "code": "敵をプレイヤーに向けて動かす"
+        }
+      ],
+      "solution": [
+        "make",
+        "move",
+        "hit"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · GAME 03",
+      "instruction": "キャラクターがジャンプして着地するまでを並べましょう。",
+      "pieces": [
+        {
+          "id": "land",
+          "label": "着地",
+          "code": "地面に着いたか判定する"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "地面を消す"
+        },
+        {
+          "id": "up",
+          "label": "上向きの力",
+          "code": "上向きの速度を与える"
+        },
+        {
+          "id": "gravity",
+          "label": "重力",
+          "code": "重力で少しずつ落下させる"
+        },
+        {
+          "id": "key",
+          "label": "キーを確認",
+          "code": "ジャンプキーが押されたか調べる"
+        }
+      ],
+      "solution": [
+        "key",
+        "up",
+        "gravity",
+        "land"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · GAME 04",
+      "instruction": "ステージクリアの流れを並べましょう。",
+      "pieces": [
+        {
+          "id": "goal",
+          "label": "ゴール確認",
+          "code": "ゴールに着いたか調べる"
+        },
+        {
+          "id": "next",
+          "label": "次へ",
+          "code": "次のステージを読み込む"
+        },
+        {
+          "id": "clear",
+          "label": "クリア表示",
+          "code": "クリア画面を表示する"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "ゲームのデータを全部消す"
+        }
+      ],
+      "solution": [
+        "goal",
+        "clear",
+        "next"
+      ]
+    }
+  ]
 }

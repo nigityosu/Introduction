@@ -1,4 +1,334 @@
 {
   "level": "intermediate",
-  "status": "coming-soon"
+  "status": "available",
+  "lessons": [
+    {
+      "title": "GAME · INTERMEDIATE 01",
+      "instruction": "ゲームループを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "dr",
+          "label": "画面を描く",
+          "code": "draw();"
+        },
+        {
+          "id": "start",
+          "label": "開始",
+          "code": "loop();"
+        },
+        {
+          "id": "fn",
+          "label": "関数を開く",
+          "code": "function loop() {"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "while (true) { draw(); }"
+        },
+        {
+          "id": "up",
+          "label": "状態を更新",
+          "code": "update();"
+        },
+        {
+          "id": "close",
+          "label": "関数を閉じる",
+          "code": "}"
+        },
+        {
+          "id": "next",
+          "label": "次のフレーム",
+          "code": "requestAnimationFrame(loop);"
+        }
+      ],
+      "solution": [
+        "fn",
+        "up",
+        "dr",
+        "next",
+        "close",
+        "start"
+      ]
+    },
+    {
+      "title": "GAME · INTERMEDIATE 02",
+      "instruction": "四角同士の当たり判定を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "fn",
+          "label": "関数を開く",
+          "code": "function isHit(a, b) {"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "a.x > b.x + b.w &&"
+        },
+        {
+          "id": "c3",
+          "label": "条件3",
+          "code": "a.y < b.y + b.h &&"
+        },
+        {
+          "id": "close",
+          "label": "関数を閉じる",
+          "code": "}"
+        },
+        {
+          "id": "c2",
+          "label": "条件2",
+          "code": "a.x + a.w > b.x &&"
+        },
+        {
+          "id": "c1",
+          "label": "条件1",
+          "code": "return a.x < b.x + b.w &&"
+        },
+        {
+          "id": "c4",
+          "label": "条件4",
+          "code": "a.y + a.h > b.y;"
+        }
+      ],
+      "solution": [
+        "fn",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "close"
+      ]
+    },
+    {
+      "title": "GAME · INTERMEDIATE 03",
+      "instruction": "タイトルからゲーム開始へ状態を切り替えましょう。",
+      "pieces": [
+        {
+          "id": "init",
+          "label": "状態を用意",
+          "code": "let state = 'title';"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "state === 'playing';"
+        },
+        {
+          "id": "set",
+          "label": "状態を変更",
+          "code": "state = 'playing';"
+        },
+        {
+          "id": "if",
+          "label": "条件",
+          "code": "if (state === 'title' && enterPressed) {"
+        }
+      ],
+      "solution": [
+        "init",
+        "if",
+        "set",
+        "close"
+      ]
+    },
+    {
+      "title": "GAME · INTERMEDIATE 04",
+      "instruction": "敵の配列を作って動かしましょう。",
+      "pieces": [
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "push",
+          "label": "敵を追加",
+          "code": "enemies.push({ x: 300, y: 0 });"
+        },
+        {
+          "id": "move",
+          "label": "下へ動かす",
+          "code": "enemy.y += 2;"
+        },
+        {
+          "id": "for",
+          "label": "全員に処理",
+          "code": "for (const enemy of enemies) {"
+        },
+        {
+          "id": "arr",
+          "label": "配列を用意",
+          "code": "const enemies = [];"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "enemies = null;"
+        }
+      ],
+      "solution": [
+        "arr",
+        "push",
+        "for",
+        "move",
+        "close"
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "title": "INTERMEDIATE EXAM · GAME 01",
+      "instruction": "ハイスコアを保存する処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "if",
+          "label": "比較",
+          "code": "if (score > best) {"
+        },
+        {
+          "id": "get",
+          "label": "保存値を取得",
+          "code": "const best = Number(localStorage.getItem('best') || 0);"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "localStorage.clear();"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "set",
+          "label": "保存",
+          "code": "localStorage.setItem('best', score);"
+        }
+      ],
+      "solution": [
+        "get",
+        "if",
+        "set",
+        "close"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · GAME 02",
+      "instruction": "キー入力を記録する処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "set",
+          "label": "押された記録",
+          "code": "keys[e.code] = true;"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "});"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "keys = e.code;"
+        },
+        {
+          "id": "listen",
+          "label": "押下を待つ",
+          "code": "window.addEventListener('keydown', (e) => {"
+        },
+        {
+          "id": "keys",
+          "label": "入れ物を用意",
+          "code": "const keys = {};"
+        }
+      ],
+      "solution": [
+        "keys",
+        "listen",
+        "set",
+        "close"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · GAME 03",
+      "instruction": "弾を撃って動かす処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "if",
+          "label": "キー確認",
+          "code": "if (keys.Space) {"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "move",
+          "label": "弾を動かす",
+          "code": "for (const b of bullets) b.y -= 5;"
+        },
+        {
+          "id": "push",
+          "label": "弾を追加",
+          "code": "bullets.push({ x: player.x, y: player.y });"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "bullets.length = player.x;"
+        }
+      ],
+      "solution": [
+        "if",
+        "push",
+        "close",
+        "move"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · GAME 04",
+      "instruction": "ダメージとゲームオーバーの処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "player.life += 1;"
+        },
+        {
+          "id": "dmg",
+          "label": "ライフを減らす",
+          "code": "player.life -= 1;"
+        },
+        {
+          "id": "over",
+          "label": "状態を変更",
+          "code": "state = 'gameover';"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "if",
+          "label": "条件",
+          "code": "if (player.life <= 0) {"
+        }
+      ],
+      "solution": [
+        "dmg",
+        "if",
+        "over",
+        "close"
+      ]
+    }
+  ]
 }

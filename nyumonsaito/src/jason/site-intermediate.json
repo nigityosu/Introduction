@@ -11,90 +11,724 @@
       "js": ""
     }
   },
-  "lesson": {
-    "title": "HTML・CSS・JavaScript · PRACTICE",
-    "instruction": "ボタンをクリックしたときに文章が変わる処理を組み立てましょう。",
-    "pieces": [
-      {
-        "id": "select",
-        "label": "ボタンを取得",
-        "code": "const button = document.querySelector('#greet');"
-      },
-      {
-        "id": "message",
-        "label": "文章の要素を取得",
-        "code": "const message = document.querySelector('#message');"
-      },
-      {
-        "id": "update",
-        "label": "文章を変更",
-        "code": "message.textContent = 'こんにちは！';"
-      },
-      {
-        "id": "wrong",
-        "label": "イベント名を指定",
-        "code": "button.addEventListener('hover', () => {"
-      },
-      {
-        "id": "listen",
-        "label": "クリックを待つ",
-        "code": "button.addEventListener('click', () => {"
-      },
-      {
-        "id": "close",
-        "label": "処理を閉じる",
-        "code": "});"
-      }
-    ],
-    "solution": [
-      "select",
-      "message",
-      "listen",
-      "update",
-      "close"
-    ]
-  },
-  "exam": {
-    "title": "HTML・CSS・JavaScript · PRACTICE",
-    "instruction": "ボタンをクリックしたときに文章が変わる処理を組み立てましょう。",
-    "pieces": [
-      {
-        "id": "select",
-        "label": "ボタンを取得",
-        "code": "const button = document.querySelector('#greet');"
-      },
-      {
-        "id": "message",
-        "label": "文章の要素を取得",
-        "code": "const message = document.querySelector('#message');"
-      },
-      {
-        "id": "update",
-        "label": "文章を変更",
-        "code": "message.textContent = 'こんにちは！';"
-      },
-      {
-        "id": "wrong",
-        "label": "イベント名を指定",
-        "code": "button.addEventListener('hover', () => {"
-      },
-      {
-        "id": "listen",
-        "label": "クリックを待つ",
-        "code": "button.addEventListener('click', () => {"
-      },
-      {
-        "id": "close",
-        "label": "処理を閉じる",
-        "code": "});"
-      }
-    ],
-    "solution": [
-      "select",
-      "message",
-      "listen",
-      "update",
-      "close"
-    ]
-  }
+  "lessons": [
+    {
+      "title": "HTML・CSS・JavaScript · PRACTICE",
+      "instruction": "ボタンをクリックしたときに文章が変わる処理を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "select",
+          "label": "ボタンを取得",
+          "code": "const button = document.querySelector('#greet');"
+        },
+        {
+          "id": "message",
+          "label": "文章の要素を取得",
+          "code": "const message = document.querySelector('#message');"
+        },
+        {
+          "id": "update",
+          "label": "文章を変更",
+          "code": "message.textContent = 'こんにちは！';"
+        },
+        {
+          "id": "wrong",
+          "label": "イベント名を指定",
+          "code": "button.addEventListener('hover', () => {"
+        },
+        {
+          "id": "listen",
+          "label": "クリックを待つ",
+          "code": "button.addEventListener('click', () => {"
+        },
+        {
+          "id": "close",
+          "label": "処理を閉じる",
+          "code": "});"
+        }
+      ],
+      "solution": [
+        "select",
+        "message",
+        "listen",
+        "update",
+        "close"
+      ]
+    },
+    {
+      "title": "HTML・CSS・JavaScript · PRACTICE 02",
+      "instruction": "ボタンを押すたびに数字が増えるカウンターを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "inc",
+          "label": "数を増やす",
+          "code": "count += 1;"
+        },
+        {
+          "id": "listen",
+          "label": "クリックを待つ",
+          "code": "button.addEventListener('click', () => {"
+        },
+        {
+          "id": "wrong",
+          "label": "数を減らす",
+          "code": "count -= 1;"
+        },
+        {
+          "id": "btn",
+          "label": "ボタンを取得",
+          "code": "const button = document.querySelector('#add');"
+        },
+        {
+          "id": "close",
+          "label": "処理を閉じる",
+          "code": "});"
+        },
+        {
+          "id": "show",
+          "label": "表示を更新",
+          "code": "document.querySelector('#count').textContent = count;"
+        },
+        {
+          "id": "init",
+          "label": "数を用意",
+          "code": "let count = 0;"
+        }
+      ],
+      "solution": [
+        "init",
+        "btn",
+        "listen",
+        "inc",
+        "show",
+        "close"
+      ]
+    },
+    {
+      "title": "HTML・CSS・JavaScript · PRACTICE 03",
+      "instruction": "ボタンでCSSクラスを切り替える処理を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "tg",
+          "label": "クラスを切替",
+          "code": "box.classList.toggle('active');"
+        },
+        {
+          "id": "box",
+          "label": "箱を取得",
+          "code": "const box = document.querySelector('.box');"
+        },
+        {
+          "id": "btn",
+          "label": "ボタンを取得",
+          "code": "const toggle = document.querySelector('#toggle');"
+        },
+        {
+          "id": "close",
+          "label": "処理を閉じる",
+          "code": "});"
+        },
+        {
+          "id": "listen",
+          "label": "クリックを待つ",
+          "code": "toggle.addEventListener('click', () => {"
+        },
+        {
+          "id": "wrong",
+          "label": "クラスを削除",
+          "code": "box.classList.remove('box');"
+        }
+      ],
+      "solution": [
+        "box",
+        "btn",
+        "listen",
+        "tg",
+        "close"
+      ]
+    },
+    {
+      "title": "HTML・CSS・JavaScript · PRACTICE 04",
+      "instruction": "入力した文字をそのまま表示する処理を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "out",
+          "label": "表示先を取得",
+          "code": "const output = document.querySelector('#output');"
+        },
+        {
+          "id": "close",
+          "label": "処理を閉じる",
+          "code": "});"
+        },
+        {
+          "id": "wrong",
+          "label": "要素を代入",
+          "code": "output.textContent = input;"
+        },
+        {
+          "id": "input",
+          "label": "入力欄を取得",
+          "code": "const input = document.querySelector('#name');"
+        },
+        {
+          "id": "set",
+          "label": "文字を表示",
+          "code": "output.textContent = input.value;"
+        },
+        {
+          "id": "listen",
+          "label": "入力を待つ",
+          "code": "input.addEventListener('input', () => {"
+        }
+      ],
+      "solution": [
+        "input",
+        "out",
+        "listen",
+        "set",
+        "close"
+      ]
+    },
+    {
+      "title": "HTML · TAGS 01",
+      "instruction": "開きタグ・中身・閉じタグを分けて、カードの構造を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "po",
+          "label": "開きタグ(p)",
+          "code": "<p>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</div>"
+        },
+        {
+          "id": "ht",
+          "label": "見出しの文字",
+          "code": "おすすめ"
+        },
+        {
+          "id": "h2c",
+          "label": "閉じタグ(h2)",
+          "code": "</h2>"
+        },
+        {
+          "id": "pt",
+          "label": "説明の文字",
+          "code": "今日のおすすめを紹介します。"
+        },
+        {
+          "id": "sc",
+          "label": "閉じタグ(section)",
+          "code": "</section>"
+        },
+        {
+          "id": "so",
+          "label": "開きタグ(section)",
+          "code": "<section>"
+        },
+        {
+          "id": "h2o",
+          "label": "開きタグ(h2)",
+          "code": "<h2>"
+        },
+        {
+          "id": "pc",
+          "label": "閉じタグ(p)",
+          "code": "</p>"
+        }
+      ],
+      "solution": [
+        "so",
+        "h2o",
+        "ht",
+        "h2c",
+        "po",
+        "pt",
+        "pc",
+        "sc"
+      ]
+    },
+    {
+      "title": "HTML · TAGS 02",
+      "instruction": "メニューのリストを、タグを分けて組み立てましょう。",
+      "pieces": [
+        {
+          "id": "uo",
+          "label": "開きタグ(ul)",
+          "code": "<ul>"
+        },
+        {
+          "id": "lt",
+          "label": "項目の文字",
+          "code": "ホーム"
+        },
+        {
+          "id": "nc",
+          "label": "閉じタグ(nav)",
+          "code": "</nav>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</ol>"
+        },
+        {
+          "id": "no",
+          "label": "開きタグ(nav)",
+          "code": "<nav>"
+        },
+        {
+          "id": "lc",
+          "label": "閉じタグ(li)",
+          "code": "</li>"
+        },
+        {
+          "id": "lo",
+          "label": "開きタグ(li)",
+          "code": "<li>"
+        },
+        {
+          "id": "uc",
+          "label": "閉じタグ(ul)",
+          "code": "</ul>"
+        }
+      ],
+      "solution": [
+        "no",
+        "uo",
+        "lo",
+        "lt",
+        "lc",
+        "uc",
+        "nc"
+      ]
+    },
+    {
+      "title": "HTML · TAGS 03",
+      "instruction": "入力フォームを、開きタグと閉じタグを分けて組み立てましょう。",
+      "pieces": [
+        {
+          "id": "fo",
+          "label": "開きタグ(form)",
+          "code": "<form>"
+        },
+        {
+          "id": "bt",
+          "label": "ボタンの文字",
+          "code": "送信"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</input>"
+        },
+        {
+          "id": "lbc",
+          "label": "閉じタグ(label)",
+          "code": "</label>"
+        },
+        {
+          "id": "in",
+          "label": "入力欄",
+          "code": "<input type=\"text\">"
+        },
+        {
+          "id": "lbo",
+          "label": "開きタグ(label)",
+          "code": "<label>"
+        },
+        {
+          "id": "lbt",
+          "label": "ラベルの文字",
+          "code": "名前"
+        },
+        {
+          "id": "fc",
+          "label": "閉じタグ(form)",
+          "code": "</form>"
+        },
+        {
+          "id": "bc",
+          "label": "閉じタグ(button)",
+          "code": "</button>"
+        },
+        {
+          "id": "bo",
+          "label": "開きタグ(button)",
+          "code": "<button>"
+        }
+      ],
+      "solution": [
+        "fo",
+        "lbo",
+        "lbt",
+        "lbc",
+        "in",
+        "bo",
+        "bt",
+        "bc",
+        "fc"
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "title": "HTML・CSS・JavaScript · PRACTICE",
+      "instruction": "ボタンをクリックしたときに文章が変わる処理を組み立てましょう。",
+      "pieces": [
+        {
+          "id": "select",
+          "label": "ボタンを取得",
+          "code": "const button = document.querySelector('#greet');"
+        },
+        {
+          "id": "message",
+          "label": "文章の要素を取得",
+          "code": "const message = document.querySelector('#message');"
+        },
+        {
+          "id": "update",
+          "label": "文章を変更",
+          "code": "message.textContent = 'こんにちは！';"
+        },
+        {
+          "id": "wrong",
+          "label": "イベント名を指定",
+          "code": "button.addEventListener('hover', () => {"
+        },
+        {
+          "id": "listen",
+          "label": "クリックを待つ",
+          "code": "button.addEventListener('click', () => {"
+        },
+        {
+          "id": "close",
+          "label": "処理を閉じる",
+          "code": "});"
+        }
+      ],
+      "solution": [
+        "select",
+        "message",
+        "listen",
+        "update",
+        "close"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · WEB 02",
+      "instruction": "リストに項目を追加する処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "add",
+          "label": "追加する",
+          "code": "list.appendChild(item);"
+        },
+        {
+          "id": "wrong",
+          "label": "項目を削除",
+          "code": "list.removeChild(item);"
+        },
+        {
+          "id": "item",
+          "label": "要素を作る",
+          "code": "const item = document.createElement('li');"
+        },
+        {
+          "id": "text",
+          "label": "文字を入れる",
+          "code": "item.textContent = 'あたらしい項目';"
+        },
+        {
+          "id": "list",
+          "label": "リスト取得",
+          "code": "const list = document.querySelector('#list');"
+        }
+      ],
+      "solution": [
+        "list",
+        "item",
+        "text",
+        "add"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · WEB 03",
+      "instruction": "フォーム送信時の処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "prevent",
+          "label": "送信を止める",
+          "code": "event.preventDefault();"
+        },
+        {
+          "id": "listen",
+          "label": "送信を待つ",
+          "code": "form.addEventListener('submit', (event) => {"
+        },
+        {
+          "id": "log",
+          "label": "記録する",
+          "code": "console.log('送信しました');"
+        },
+        {
+          "id": "wrong",
+          "label": "送信する",
+          "code": "form.submit(event);"
+        },
+        {
+          "id": "close",
+          "label": "処理を閉じる",
+          "code": "});"
+        },
+        {
+          "id": "form",
+          "label": "フォーム取得",
+          "code": "const form = document.querySelector('form');"
+        }
+      ],
+      "solution": [
+        "form",
+        "listen",
+        "prevent",
+        "log",
+        "close"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · WEB 04",
+      "instruction": "年齢で処理を分ける条件分岐を並べましょう。",
+      "pieces": [
+        {
+          "id": "log",
+          "label": "表示",
+          "code": "console.log('大人です');"
+        },
+        {
+          "id": "wrong",
+          "label": "条件(まちがい)",
+          "code": "if (age = 18) {"
+        },
+        {
+          "id": "if",
+          "label": "条件",
+          "code": "if (age >= 18) {"
+        },
+        {
+          "id": "close",
+          "label": "閉じる",
+          "code": "}"
+        },
+        {
+          "id": "age",
+          "label": "年齢を用意",
+          "code": "const age = 20;"
+        }
+      ],
+      "solution": [
+        "age",
+        "if",
+        "log",
+        "close"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · TAGS 01",
+      "instruction": "プロフィールページの構造を、タグを分けて完成させましょう。",
+      "pieces": [
+        {
+          "id": "h1c",
+          "label": "閉じタグ(h1)",
+          "code": "</h1>"
+        },
+        {
+          "id": "h1t",
+          "label": "見出しの文字",
+          "code": "わたしの紹介"
+        },
+        {
+          "id": "po",
+          "label": "開きタグ(p)",
+          "code": "<p>"
+        },
+        {
+          "id": "mo",
+          "label": "開きタグ(main)",
+          "code": "<main>"
+        },
+        {
+          "id": "h1o",
+          "label": "開きタグ(h1)",
+          "code": "<h1>"
+        },
+        {
+          "id": "pc",
+          "label": "閉じタグ(p)",
+          "code": "</p>"
+        },
+        {
+          "id": "mc",
+          "label": "閉じタグ(main)",
+          "code": "</main>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "<footer>"
+        },
+        {
+          "id": "hc",
+          "label": "閉じタグ(header)",
+          "code": "</header>"
+        },
+        {
+          "id": "pt",
+          "label": "紹介の文字",
+          "code": "好きなことを紹介します。"
+        },
+        {
+          "id": "ho",
+          "label": "開きタグ(header)",
+          "code": "<header>"
+        }
+      ],
+      "solution": [
+        "mo",
+        "ho",
+        "h1o",
+        "h1t",
+        "h1c",
+        "hc",
+        "po",
+        "pt",
+        "pc",
+        "mc"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · TAGS 02",
+      "instruction": "表の見出し行を、タグを分けて完成させましょう。",
+      "pieces": [
+        {
+          "id": "tro",
+          "label": "開きタグ(tr)",
+          "code": "<tr>"
+        },
+        {
+          "id": "to",
+          "label": "開きタグ(table)",
+          "code": "<table>"
+        },
+        {
+          "id": "tc",
+          "label": "閉じタグ(table)",
+          "code": "</table>"
+        },
+        {
+          "id": "tho",
+          "label": "開きタグ(th)",
+          "code": "<th>"
+        },
+        {
+          "id": "thc",
+          "label": "閉じタグ(th)",
+          "code": "</th>"
+        },
+        {
+          "id": "trc",
+          "label": "閉じタグ(tr)",
+          "code": "</tr>"
+        },
+        {
+          "id": "tht",
+          "label": "見出しの文字",
+          "code": "名前"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</td>"
+        }
+      ],
+      "solution": [
+        "to",
+        "tro",
+        "tho",
+        "tht",
+        "thc",
+        "trc",
+        "tc"
+      ]
+    },
+    {
+      "title": "INTERMEDIATE EXAM · TAGS 03",
+      "instruction": "画像とリンクのあるカードを、タグを分けて完成させましょう。",
+      "pieces": [
+        {
+          "id": "h2c",
+          "label": "閉じタグ(h2)",
+          "code": "</h2>"
+        },
+        {
+          "id": "ao",
+          "label": "開きタグ(article)",
+          "code": "<article>"
+        },
+        {
+          "id": "lc",
+          "label": "閉じタグ(a)",
+          "code": "</a>"
+        },
+        {
+          "id": "lo",
+          "label": "開きタグ(a)",
+          "code": "<a href=\"more.html\">"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</h3>"
+        },
+        {
+          "id": "h2o",
+          "label": "開きタグ(h2)",
+          "code": "<h2>"
+        },
+        {
+          "id": "ac",
+          "label": "閉じタグ(article)",
+          "code": "</article>"
+        },
+        {
+          "id": "h2t",
+          "label": "見出しの文字",
+          "code": "今日の一枚"
+        },
+        {
+          "id": "lt",
+          "label": "リンクの文字",
+          "code": "続きを読む"
+        },
+        {
+          "id": "img",
+          "label": "画像",
+          "code": "<img src=\"photo.jpg\" alt=\"風景\">"
+        }
+      ],
+      "solution": [
+        "ao",
+        "h2o",
+        "h2t",
+        "h2c",
+        "img",
+        "lo",
+        "lt",
+        "lc",
+        "ac"
+      ]
+    }
+  ]
 }

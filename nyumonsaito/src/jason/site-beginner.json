@@ -1,82 +1,326 @@
 {
-  "lesson": {
-    "title": "WEB SITE · LESSON 01",
-    "instruction": "Webページの部品を、正しい順番で組み立てましょう。",
-    "pieces": [
-      {
-        "id": "heading",
-        "label": "見出し",
-        "code": "<h1>はじめてのページ</h1>"
-      },
-      {
-        "id": "close",
-        "label": "閉じタグ",
-        "code": "</main>"
-      },
-      {
-        "id": "button",
-        "label": "ボタン",
-        "code": "<button>はじめる</button>"
-      },
-      {
-        "id": "open",
-        "label": "全体を囲む",
-        "code": "<main>"
-      },
-      {
-        "id": "paragraph",
-        "label": "説明文",
-        "code": "<p>ページを作ってみよう。</p>"
-      },
-      {
-        "id": "wrong",
-        "label": "まちがい部品",
-        "code": "</p>"
-      }
-    ],
-    "solution": [
-      "open",
-      "heading",
-      "paragraph",
-      "button",
-      "close"
-    ]
-  },
-  "exam": {
-    "title": "BEGINNER EXAM · WEB",
-    "instruction": "プロフィールページの構造を完成させましょう。",
-    "pieces": [
-      {
-        "id": "title",
-        "label": "ページ全体",
-        "code": "<main>"
-      },
-      {
-        "id": "close",
-        "label": "ページを閉じる",
-        "code": "</main>"
-      },
-      {
-        "id": "heading",
-        "label": "見出し",
-        "code": "<h1>わたしの紹介</h1>"
-      },
-      {
-        "id": "text",
-        "label": "紹介文",
-        "code": "<p>好きなことを紹介します。</p>"
-      },
-      {
-        "id": "wrong",
-        "label": "まちがい部品",
-        "code": "<footer>"
-      }
-    ],
-    "solution": [
-      "title",
-      "heading",
-      "text",
-      "close"
-    ]
-  }
+  "lessons": [
+    {
+      "title": "WEB SITE · LESSON 01",
+      "instruction": "Webページの部品を、正しい順番で組み立てましょう。",
+      "pieces": [
+        {
+          "id": "heading",
+          "label": "見出し",
+          "code": "<h1>はじめてのページ</h1>"
+        },
+        {
+          "id": "close",
+          "label": "閉じタグ",
+          "code": "</main>"
+        },
+        {
+          "id": "button",
+          "label": "ボタン",
+          "code": "<button>はじめる</button>"
+        },
+        {
+          "id": "open",
+          "label": "全体を囲む",
+          "code": "<main>"
+        },
+        {
+          "id": "paragraph",
+          "label": "説明文",
+          "code": "<p>ページを作ってみよう。</p>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</p>"
+        }
+      ],
+      "solution": [
+        "open",
+        "heading",
+        "paragraph",
+        "button",
+        "close"
+      ]
+    },
+    {
+      "title": "WEB SITE · LESSON 02",
+      "instruction": "リストを作るHTMLを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "b",
+          "label": "項目2",
+          "code": "<li>みかん</li>"
+        },
+        {
+          "id": "ul",
+          "label": "リスト開始",
+          "code": "<ul>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</li>"
+        },
+        {
+          "id": "ulc",
+          "label": "リスト終了",
+          "code": "</ul>"
+        },
+        {
+          "id": "a",
+          "label": "項目1",
+          "code": "<li>りんご</li>"
+        }
+      ],
+      "solution": [
+        "ul",
+        "a",
+        "b",
+        "ulc"
+      ]
+    },
+    {
+      "title": "WEB SITE · LESSON 03",
+      "instruction": "見出し・画像・リンクのあるページを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</img>"
+        },
+        {
+          "id": "close",
+          "label": "閉じタグ",
+          "code": "</main>"
+        },
+        {
+          "id": "open",
+          "label": "全体を囲む",
+          "code": "<main>"
+        },
+        {
+          "id": "img",
+          "label": "画像",
+          "code": "<img src=\"cat.jpg\" alt=\"ねこ\">"
+        },
+        {
+          "id": "h",
+          "label": "見出し",
+          "code": "<h1>おすすめ</h1>"
+        },
+        {
+          "id": "link",
+          "label": "リンク",
+          "code": "<a href=\"next.html\">つぎへ</a>"
+        }
+      ],
+      "solution": [
+        "open",
+        "h",
+        "img",
+        "link",
+        "close"
+      ]
+    },
+    {
+      "title": "WEB SITE · LESSON 04",
+      "instruction": "入力フォームを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "form",
+          "label": "フォーム開始",
+          "code": "<form>"
+        },
+        {
+          "id": "btn",
+          "label": "送信ボタン",
+          "code": "<button>送信</button>"
+        },
+        {
+          "id": "input",
+          "label": "入力欄",
+          "code": "<input type=\"text\">"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</input>"
+        },
+        {
+          "id": "label",
+          "label": "ラベル",
+          "code": "<label>名前</label>"
+        },
+        {
+          "id": "close",
+          "label": "フォーム終了",
+          "code": "</form>"
+        }
+      ],
+      "solution": [
+        "form",
+        "label",
+        "input",
+        "btn",
+        "close"
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "title": "BEGINNER EXAM · WEB",
+      "instruction": "プロフィールページの構造を完成させましょう。",
+      "pieces": [
+        {
+          "id": "title",
+          "label": "ページ全体",
+          "code": "<main>"
+        },
+        {
+          "id": "close",
+          "label": "ページを閉じる",
+          "code": "</main>"
+        },
+        {
+          "id": "heading",
+          "label": "見出し",
+          "code": "<h1>わたしの紹介</h1>"
+        },
+        {
+          "id": "text",
+          "label": "紹介文",
+          "code": "<p>好きなことを紹介します。</p>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "<footer>"
+        }
+      ],
+      "solution": [
+        "title",
+        "heading",
+        "text",
+        "close"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · WEB 02",
+      "instruction": "メニュー(ナビゲーション)を完成させましょう。",
+      "pieces": [
+        {
+          "id": "home",
+          "label": "ホーム",
+          "code": "<a href=\"index.html\">ホーム</a>"
+        },
+        {
+          "id": "nav",
+          "label": "メニュー開始",
+          "code": "<nav>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</navigation>"
+        },
+        {
+          "id": "close",
+          "label": "メニュー終了",
+          "code": "</nav>"
+        },
+        {
+          "id": "about",
+          "label": "紹介",
+          "code": "<a href=\"about.html\">紹介</a>"
+        }
+      ],
+      "solution": [
+        "nav",
+        "home",
+        "about",
+        "close"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · WEB 03",
+      "instruction": "ヘッダーとフッターのある構造を完成させましょう。",
+      "pieces": [
+        {
+          "id": "ho",
+          "label": "ヘッダー開始",
+          "code": "<header>"
+        },
+        {
+          "id": "h1",
+          "label": "見出し",
+          "code": "<h1>ブログ</h1>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</footer>"
+        },
+        {
+          "id": "foot",
+          "label": "フッター",
+          "code": "<footer>© 2026</footer>"
+        },
+        {
+          "id": "hc",
+          "label": "ヘッダー終了",
+          "code": "</header>"
+        }
+      ],
+      "solution": [
+        "ho",
+        "h1",
+        "hc",
+        "foot"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · WEB 04",
+      "instruction": "表(テーブル)の構造を完成させましょう。",
+      "pieces": [
+        {
+          "id": "tc",
+          "label": "表の終了",
+          "code": "</table>"
+        },
+        {
+          "id": "tr",
+          "label": "行の開始",
+          "code": "<tr>"
+        },
+        {
+          "id": "trc",
+          "label": "行の終了",
+          "code": "</tr>"
+        },
+        {
+          "id": "t",
+          "label": "表の開始",
+          "code": "<table>"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "</td>"
+        },
+        {
+          "id": "td",
+          "label": "セル",
+          "code": "<td>りんご</td>"
+        }
+      ],
+      "solution": [
+        "t",
+        "tr",
+        "td",
+        "trc",
+        "tc"
+      ]
+    }
+  ]
 }

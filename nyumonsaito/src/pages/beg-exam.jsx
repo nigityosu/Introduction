@@ -16,7 +16,7 @@ function BeginnerExamPage({ genre }) {
       description="部品を正しい順に組み立てると合格です。"
     >
       <BlockPuzzle
-        {...({ site: siteBeginnerData, game: gameBeginnerData, robot: robotBeginnerData }[genre] ?? siteBeginnerData).exam}
+        {...({ site: siteBeginnerData, game: gameBeginnerData, robot: robotBeginnerData }[genre] ?? siteBeginnerData).exams?.[0]}
         nextHref={genre === 'site' ? '/genre/site/intermediate/html-css-js' : '/genre'}
       />
       <Link className="text-link" to={`/genre/${genre}/beginner`}>

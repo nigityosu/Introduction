@@ -1,70 +1,290 @@
 {
-  "lesson": {
-    "title": "ROBOT · LESSON 01",
-    "instruction": "センサーを使ってロボットを動かす流れを組み立てましょう。",
-    "pieces": [
-      {
-        "id": "move",
-        "label": "前進する",
-        "code": "ロボットを前に進める"
-      },
-      {
-        "id": "sensor",
-        "label": "距離を調べる",
-        "code": "センサーで前方の距離を読む"
-      },
-      {
-        "id": "stop",
-        "label": "停止する",
-        "code": "ロボットを停止する"
-      },
-      {
-        "id": "condition",
-        "label": "条件を確認",
-        "code": "障害物が近いか調べる"
-      },
-      {
-        "id": "wrong",
-        "label": "まちがい部品",
-        "code": "センサーを無効にする"
-      }
-    ],
-    "solution": [
-      "sensor",
-      "condition",
-      "move",
-      "stop"
-    ]
-  },
-  "exam": {
-    "title": "BEGINNER EXAM · ROBOT",
-    "instruction": "障害物を見つけて止まるロボットの処理を並べましょう。",
-    "pieces": [
-      {
-        "id": "read",
-        "label": "距離を読む",
-        "code": "センサーから距離を取得する"
-      },
-      {
-        "id": "check",
-        "label": "条件を確認",
-        "code": "距離が近いか判定する"
-      },
-      {
-        "id": "stop",
-        "label": "停止",
-        "code": "ロボットを停止する"
-      },
-      {
-        "id": "wrong",
-        "label": "まちがい部品",
-        "code": "障害物に向かって進む"
-      }
-    ],
-    "solution": [
-      "read",
-      "check",
-      "stop"
-    ]
-  }
+  "lessons": [
+    {
+      "title": "ROBOT · LESSON 01",
+      "instruction": "センサーを使ってロボットを動かす流れを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "move",
+          "label": "前進する",
+          "code": "ロボットを前に進める"
+        },
+        {
+          "id": "sensor",
+          "label": "距離を調べる",
+          "code": "センサーで前方の距離を読む"
+        },
+        {
+          "id": "stop",
+          "label": "停止する",
+          "code": "ロボットを停止する"
+        },
+        {
+          "id": "condition",
+          "label": "条件を確認",
+          "code": "障害物が近いか調べる"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "センサーを無効にする"
+        }
+      ],
+      "solution": [
+        "sensor",
+        "condition",
+        "move",
+        "stop"
+      ]
+    },
+    {
+      "title": "ROBOT · LESSON 02",
+      "instruction": "ボタンでLEDを光らせる流れを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "wait",
+          "label": "待つ",
+          "code": "1秒待つ"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "LEDをつけたままにする"
+        },
+        {
+          "id": "btn",
+          "label": "ボタン確認",
+          "code": "ボタンが押されたか調べる"
+        },
+        {
+          "id": "on",
+          "label": "点灯",
+          "code": "LEDをつける"
+        },
+        {
+          "id": "off",
+          "label": "消灯",
+          "code": "LEDを消す"
+        }
+      ],
+      "solution": [
+        "btn",
+        "on",
+        "wait",
+        "off"
+      ]
+    },
+    {
+      "title": "ROBOT · LESSON 03",
+      "instruction": "黒い線に沿って進むロボットの流れを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "センサーを外す"
+        },
+        {
+          "id": "go",
+          "label": "前進",
+          "code": "ロボットを前に進める"
+        },
+        {
+          "id": "read",
+          "label": "色を読む",
+          "code": "センサーで床の色を読む"
+        },
+        {
+          "id": "check",
+          "label": "条件を確認",
+          "code": "黒線から外れたか調べる"
+        },
+        {
+          "id": "turn",
+          "label": "向きを直す",
+          "code": "線の方向に向きを修正する"
+        }
+      ],
+      "solution": [
+        "read",
+        "check",
+        "turn",
+        "go"
+      ]
+    },
+    {
+      "title": "ROBOT · LESSON 04",
+      "instruction": "ロボットの処理をくり返す流れを組み立てましょう。",
+      "pieces": [
+        {
+          "id": "move",
+          "label": "動かす",
+          "code": "近くなければ前に進める"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "一度だけ実行して終わる"
+        },
+        {
+          "id": "check",
+          "label": "条件を確認",
+          "code": "障害物が近いか調べる"
+        },
+        {
+          "id": "loop",
+          "label": "くり返す",
+          "code": "ずっとくり返す"
+        },
+        {
+          "id": "read",
+          "label": "距離を読む",
+          "code": "センサーで前方の距離を読む"
+        }
+      ],
+      "solution": [
+        "loop",
+        "read",
+        "check",
+        "move"
+      ]
+    }
+  ],
+  "exams": [
+    {
+      "title": "BEGINNER EXAM · ROBOT",
+      "instruction": "障害物を見つけて止まるロボットの処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "read",
+          "label": "距離を読む",
+          "code": "センサーから距離を取得する"
+        },
+        {
+          "id": "check",
+          "label": "条件を確認",
+          "code": "距離が近いか判定する"
+        },
+        {
+          "id": "stop",
+          "label": "停止",
+          "code": "ロボットを停止する"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "障害物に向かって進む"
+        }
+      ],
+      "solution": [
+        "read",
+        "check",
+        "stop"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · ROBOT 02",
+      "instruction": "モーターを3秒だけ回す処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "wait",
+          "label": "待つ",
+          "code": "3秒待つ"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "速度を決めずに止める"
+        },
+        {
+          "id": "run",
+          "label": "回す",
+          "code": "モーターを回す"
+        },
+        {
+          "id": "speed",
+          "label": "速度を決める",
+          "code": "モーターの速度を決める"
+        },
+        {
+          "id": "stop",
+          "label": "止める",
+          "code": "モーターを止める"
+        }
+      ],
+      "solution": [
+        "speed",
+        "run",
+        "wait",
+        "stop"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · ROBOT 03",
+      "instruction": "障害物を見つけたら音で知らせる処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "stop",
+          "label": "音を止める",
+          "code": "ブザーを止める"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "ブザーを鳴らさず進む"
+        },
+        {
+          "id": "detect",
+          "label": "検知",
+          "code": "センサーで障害物を検知する"
+        },
+        {
+          "id": "buzz",
+          "label": "音を鳴らす",
+          "code": "ブザーを鳴らす"
+        }
+      ],
+      "solution": [
+        "detect",
+        "buzz",
+        "stop"
+      ]
+    },
+    {
+      "title": "BEGINNER EXAM · ROBOT 04",
+      "instruction": "ロボットが左に曲がる処理を並べましょう。",
+      "pieces": [
+        {
+          "id": "right",
+          "label": "右を回す",
+          "code": "右のモーターを回す"
+        },
+        {
+          "id": "wrong",
+          "label": "まちがい部品",
+          "code": "両方のモーターを逆回転にし続ける"
+        },
+        {
+          "id": "resume",
+          "label": "前進再開",
+          "code": "前進を再開する"
+        },
+        {
+          "id": "check",
+          "label": "角度確認",
+          "code": "90度回ったか確認する"
+        },
+        {
+          "id": "left",
+          "label": "左を止める",
+          "code": "左のモーターを止める"
+        }
+      ],
+      "solution": [
+        "left",
+        "right",
+        "check",
+        "resume"
+      ]
+    }
+  ]
 }
